@@ -1,0 +1,8 @@
+﻿l_german:
+ bsws1.title:0 "Eine Nacht heißer Hingabe~"
+ bsws1.desc:0 "Ich habe mich entschieden, einen romantischen Abend mit [recipient.GetShortUINameNoTooltip] zu genießen, und Eins führte zum Anderen... [recipient.GetSheHe|U] wird erst mal nicht mehr gerade laufen können~"
+ bsws1.button:0 "Aah~"
+ bsws2.title:0 "Eine Nacht heißer Hingabe~"
+ bsws2.desc:0 "Ich habe mich entschieden, einen romantischen Abend mit [recipient.GetShortUINameNoTooltip] zu genießen, und Eins führte zum Anderen... Ich werde vorerst nicht mehr gerade laufen können~"
+ bsws2.button:0 "Aah~"
+ 

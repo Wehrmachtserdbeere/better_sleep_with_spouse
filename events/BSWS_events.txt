@@ -1,0 +1,172 @@
+﻿
+namespace = better_sleep_with_spouse
+
+
+##################
+# Sleep with spouse event
+# by Nameless the Fameless
+# 1-100
+##################
+
+#Male actor
+better_sleep_with_spouse.1 = {
+	title = bsws1.title
+	desc = bsws1.desc
+	type = character_event
+	
+	theme = lover_relation
+	
+	left_portrait = {
+		character = root
+		triggered_animation = { animation = love }
+	}
+	
+	right_portrait = 	{
+		character = scope:recipient
+		triggered_animation = { animation = flirtation_left }
+	}
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = bsws1.button
+		
+		scope:actor = {
+			if = {
+				limit = {
+					sex_same_as = scope:recipient
+					NOT = {
+						faith = { has_doctrine_parameter = homosexuality_accepted }
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_secret = { secret_type = secret_homosexual }
+						}
+					}
+					add_secret = { type = secret_homosexual }
+				}
+				random_secret = {
+					limit = { secret_type = secret_homosexual }
+					save_scope_as = my_sodomite_secret
+				}
+			}
+		}
+		custom_tooltip = better_sleep_with_spouse_recipient_will_know_sodomy
+		scope:recipient = {
+			if = {
+				limit = {
+					sex_same_as = scope:actor
+					NOT = {
+						faith = { has_doctrine_parameter = homosexuality_accepted }
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_secret = { secret_type = secret_homosexual }
+						}
+					}
+					add_secret = { type = secret_homosexual }
+				}
+				random_secret = {
+					limit = { secret_type = secret_homosexual }
+					save_scope_as = sodomite_secret
+				}
+			}
+		}
+		custom_tooltip = better_sleep_with_spouse_actor_will_know_sodomy
+	}
+	after = {
+		scope:my_sodomite_secret = {
+			reveal_to = scope:recipient
+		}
+		scope:sodomite_secret = {
+			reveal_to = scope:actor
+		}
+	}
+}
+
+#Female actor
+better_sleep_with_spouse.2 = {
+	title = bsws2.title
+	desc = bsws2.desc
+	type = character_event
+	
+	theme = lover_relation
+	
+	left_portrait = {
+		character = root
+		triggered_animation = { animation = love }
+	}
+	
+	right_portrait = {
+		character = scope:recipient
+		triggered_animation = { animation = flirtation_left }
+	}
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = bsws2.button
+	
+		scope:actor = {
+			if = {
+				limit = {
+					sex_same_as = scope:recipient
+					NOT = {
+						faith = { has_doctrine_parameter = homosexuality_accepted }
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_secret = { secret_type = secret_homosexual }
+						}
+					}
+					add_secret = { type = secret_homosexual }
+				}
+				random_secret = {
+					limit = { secret_type = secret_homosexual }
+					save_scope_as = my_sodomite_secret
+				}
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = {
+					sex_same_as = scope:actor
+					NOT = {
+						faith = { has_doctrine_parameter = homosexuality_accepted }
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_secret = { secret_type = secret_homosexual }
+						}
+					}
+					add_secret = { type = secret_homosexual }
+				}
+				random_secret = {
+					limit = { secret_type = secret_homosexual }
+					save_scope_as = sodomite_secret
+				}
+			}
+		}
+	}
+
+	after = {
+		scope:my_sodomite_secret = {
+			reveal_to = scope:recipient
+		}
+		scope:sodomite_secret = {
+			reveal_to = scope:actor
+		}
+	}
+}

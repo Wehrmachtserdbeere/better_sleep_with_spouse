@@ -1,0 +1,7 @@
+﻿l_german:
+	better_sleep_with_spouse_male_interaction:0 "Ein ruhiger Abend..."
+	better_sleep_with_spouse_male_interaction_desc:0 "Hab einen privaten Abend mit [recipient.GetShortUINameNoTooltip]. Es #weak war #! schon eine Weile seitdem wir ein bisschen Zeit alleine hatten.\n\nWenn ihr beide gleichgeschlechtlig seid, #warning bekommt ihr beide ein Geheimnis! #!"
+	better_sleep_with_spouse_female_interaction:0 "Ein ruhiger Abend..."
+	better_sleep_with_spouse_female_interaction_desc:0 "Hab einen privaten Abend mit [recipient.GetShortUINameNoTooltip]. Es #weak war #! schon eine Weile seitdem wir ein bisschen Zeit alleine hatten.\n\nWenn ihr beide gleichgeschlechtlig seid, #warning bekommt ihr beide ein Geheimnis! #!"
+	better_sleep_with_spouse_recipient_will_know_sodomy:0 "Wenn Sie und [recipient.GetShortUIName] beide gleichgeschlechtlig seid, #warning bekommt ihr beide ein [GetTrait('sodomite').GetName(GetNullCharacter)] Geheimnis! #!"
+	better_sleep_with_spouse_actor_will_know_sodomy:0 "Wenn Sie und [recipient.GetShortUIName] beide gleichgeschlechtlig seid, #warning bekommt ihr beide ein [GetTrait('sodomite').GetName(GetNullCharacter)] Geheimnis! #!"

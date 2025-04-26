@@ -1,0 +1,191 @@
+﻿better_sleep_with_spouse_male_interaction = {
+	category = interaction_category_friendly
+	use_diplomatic_range = yes
+	
+	desc = better_sleep_with_spouse_male_interaction_desc
+	
+	#only show if
+	is_shown = {
+		scope:actor = {
+			is_female = no
+		}
+		
+		scope:recipient = {
+			OR = {
+				is_spouse_of = scope:actor
+				is_concubine_of = scope:actor
+				scope:actor.betrothed = scope:recipient
+				has_relation_lover = scope:actor
+			}
+			
+			#no limit on fertility, you should be able to have fun with your spouse no matter how hag
+			#fertility > 0
+			
+			#no double pregnancies
+			NOT = { has_trait = pregnant }
+			
+			is_imprisoned = no
+			# is_female = yes # Allow yaoi
+			
+			# and only if they like you enough
+			NOT = {
+				scope:recipient = {
+					opinion = {
+						target = scope:actor
+						value < 80
+					}
+				}
+			}
+		}
+	}
+	
+	# Should really be "if in court" but...
+	is_valid_showing_failures_only = {
+		scope:recipient = { is_diplomatically_available = yes }
+	}
+
+	is_highlighted = {
+		custom_tooltip = {
+			text = better_sleep_with_spouse_will_give_sodomite_secret
+		}
+	}
+	
+	auto_accept = yes
+	
+	on_accept = {
+		scope:actor = { trigger_event = better_sleep_with_spouse.1 }
+		scope:recipient = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							AND = {
+								scope:actor = { is_female = yes }
+								scope:recipient = { is_female = yes }
+							}
+							AND = {
+								scope:actor = { is_female = no }
+								scope:recipient = { is_female = no }
+							}
+						}
+					}
+				}
+				make_pregnant = { father = scope:actor }
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_opinion_modifier = {
+							modifier = bsws_opinion
+							target = scope:actor
+						}
+					}
+				}
+				add_opinion = {
+					target = scope:actor
+					modifier = bsws_opinion
+				}
+			}
+		}
+	}
+	
+	# Not for AI
+	ai_will_do = { base = 0 }
+	ai_potential = { is_ruler = yes }
+	ai_targets = { ai_recipients = spouses }
+	ai_frequency = 0
+}
+
+better_sleep_with_spouse_female_interaction = {
+	category = interaction_category_friendly
+	use_diplomatic_range = yes
+	
+	desc = better_sleep_with_spouse_female_interaction_desc
+	
+	#only show if
+	is_shown = {
+		scope:actor = {
+			is_female = yes
+			#No double pregnancies
+			NOT = { has_trait = pregnant }
+			is_imprisoned = no
+		}
+		
+		scope:recipient = {
+			OR = {
+				is_spouse_of = scope:actor
+				is_concubine_of = scope:actor
+				scope:actor.betrothed = scope:recipient
+				has_relation_lover = scope:actor
+			}
+			
+			is_imprisoned = no
+			# is_female = no # Allow yuri
+			
+			# and only if they like you enough
+			NOT = {
+				scope:recipient = {
+					opinion = {
+						target = scope:actor
+						value < 80
+					}
+				}
+			}
+		}
+	}
+
+	
+	
+	# Should really be "if in court" but...
+	is_valid_showing_failures_only = {
+		scope:recipient = { is_diplomatically_available = yes }
+	}
+	
+	auto_accept = yes
+	
+	on_accept = {
+		scope:actor = { 
+			trigger_event = better_sleep_with_spouse.2 
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							AND = {
+								scope:actor = { is_female = yes }
+								scope:recipient = { is_female = yes }
+							}
+							AND = {
+								scope:actor = { is_female = no }
+								scope:recipient = { is_female = no }
+							}
+						}
+					}
+				}
+				make_pregnant = { father = scope:actor }
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = {
+					NOT = {
+						has_opinion_modifier = {
+							modifier = bsws_opinion
+							target = scope:actor
+						}
+					}
+				}
+				add_opinion = {
+					target = scope:actor
+					modifier = bsws_opinion
+				}
+			}
+		}
+	}
+	
+	# Not for AI
+	ai_will_do = { base = 0 }
+	ai_potential = { is_ruler = yes }
+	ai_targets = { ai_recipients = spouses }
+	ai_frequency = 0
+}
+

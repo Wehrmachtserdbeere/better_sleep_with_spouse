@@ -1,0 +1,8 @@
+﻿l_english:
+ bsws1.title:0 "A night of passion~"
+ bsws1.desc:0 "I decided to have a romantic evening with [recipient.GetShortUINameNoTooltip], and one thing led to another. [recipient.GetSheHe|U] won't be walking straight for a while~"
+ bsws1.button:0 "Aah~"
+ bsws2.title:0 "A night of passion~"
+ bsws2.desc:0 "I decided to have a romantic evening with [recipient.GetShortUINameNoTooltip], and one thing led to another. I won't be walking straight for a while~"
+ bsws2.button:0 "Aah~"
+ 

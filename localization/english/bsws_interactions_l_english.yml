@@ -1,0 +1,7 @@
+﻿l_english:
+	better_sleep_with_spouse_male_interaction:0 "A quiet evening..."
+	better_sleep_with_spouse_male_interaction_desc:0 "Have a private evening with [recipient.GetShortUINameNoTooltip]. It #weak has #! been a while since we have had some time alone.\n\nIf you are both of the same sex, #R you may both receive a secret! #!"
+	better_sleep_with_spouse_female_interaction:0 "A quiet evening..."
+	better_sleep_with_spouse_female_interaction_desc:0 "Have a private evening with [recipient.GetShortUINameNoTooltip]. It #weak has #! been a while since we have had some time alone.\n\nIf you are both of the same sex, #R you may both receive a secret! #!"
+	better_sleep_with_spouse_recipient_will_know_sodomy:0 "If you are are #warning both of the same sex,#! [recipient.GetShortUIName] and you will both get a #warning [GetTrait('sodomite').GetName(GetNullCharacter)] #! secret."
+	better_sleep_with_spouse_actor_will_know_sodomy:0 "If you are are #warning both of the same sex,#! [recipient.GetShortUIName] and you will both get a #warning [GetTrait('sodomite').GetName(GetNullCharacter)] #! secret."

@@ -1,0 +1,5 @@
+﻿bsws_opinion = {
+	opinion = 5
+	years = 2
+	decaying = yes
+}
