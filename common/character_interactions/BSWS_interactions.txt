@@ -161,7 +161,7 @@ better_sleep_with_spouse_female_interaction = {
 						}
 					}
 				}
-				make_pregnant = { father = scope:actor }
+				make_pregnant = { father = scope:recipient }
 			}
 		}
 		scope:recipient = {
